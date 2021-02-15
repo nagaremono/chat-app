@@ -1,0 +1,14 @@
+import * as React from 'react';
+import { ChakraProvider, theme } from '@chakra-ui/react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Join } from './components/Join';
+import { Chat } from './components/Chat';
+
+export const App = () => (
+  <ChakraProvider theme={theme}>
+    <Router>
+      <Route path="/" exact component={Join} />
+      <Route path="/chat" component={Chat} />
+    </Router>
+  </ChakraProvider>
+);
